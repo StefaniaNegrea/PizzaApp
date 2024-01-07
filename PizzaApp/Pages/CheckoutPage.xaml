@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="PizzaApp.Pages.CheckoutPage"
+             Title="Checkout">
+    <VerticalStackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Spacing="25">
+        <Image x:Name="img" 
+               Source="check"
+               HeightRequest="150"
+               WidthRequest="150"
+               Scale="0">
+            <Image.Behaviors>
+                <toolkit:IconTintColorBehavior TintColor="Yellow"/>
+
+            </Image.Behaviors>
+        </Image>
+        <Label x:Name="msg"
+               Text="Comanda a fost plasata cu succes!"
+               FontSize="30"
+               TextColor="Red"
+               Scale="0"/>
+        <Button x:Name="homeBtn"
+                Text="Mergi la pagina principala"
+                BackgroundColor="DarkGreen"
+                CornerRadius="22"
+                HorizontalOptions="Center"
+                Padding="50, 10"
+                Scale="0"
+                Opacity="0"/>
+    </VerticalStackLayout>
+</ContentPage>

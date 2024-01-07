@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaApp.Pages.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="DarkGreen">
+
+    <Grid RowDefinitions="Auto, *, Auto"
+          Padding="15, 25">
+        <Label Grid.Row="0"
+               Text="The Magic Pizza"
+               FontSize="50"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"/>
+
+        <Image Grid.Row="1"
+               Source="pizza.png"
+               HeightRequest="250"
+               WidthRequest="250"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+
+        <VerticalStackLayout Grid.Row="2"
+                             Spacing="15">
+            <Label Text="Gustul autentic de pizza"
+                   FontSize="40"
+                   FontAttributes="Bold"/>
+            <Label Text="O aventură a gusturilor te așteaptă aici! Începe călătoria ta culinară cu pizza noastră delicioasă!"
+                   FontSize="18"
+                   LineHeight="1.2"/>
+            <Border StrokeShape="RoundRectangle 25"
+                    StrokeThickness="0"
+                    BackgroundColor="DarkGreen"
+                    HeightRequest="50">
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapgestureRecognizer_Tapped"/>
+                </Border.GestureRecognizers>
+
+                <HorizontalStackLayout HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       Spacing="10"
+                                       Padding="0, 5">
+                    <Label Text="Incepem"
+                           VerticalOptions="Center"
+                           FontSize="18"/>
+                    <Image Source="right_arrow"
+                           VerticalOptions="Center"
+                           HeightRequest="30"/>
+                </HorizontalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
